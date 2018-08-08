@@ -1,0 +1,158 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage[top=4cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headsep=0cm]{geometry}%
+\usepackage{color}%
+\usepackage{tabularx}%
+\usepackage{titling}%
+\usepackage{fontspec}%
+\usepackage{titlesec}%
+\usepackage{colortbl}%
+\usepackage{fancyhdr}%
+\usepackage{tikzpagenodes}%
+\usepackage{multicol}%
+\usepackage{xcolor}%
+\usepackage{ragged2e}%
+\usepackage{tikz}%
+%
+\definecolor{lightgray}{RGB}{220, 220, 220}%
+\definecolor{darkgray}{RGB}{197, 197, 197}%
+\definecolor{sectiongray}{RGB}{137, 139, 144}%
+\definecolor{cegekagreen}{RGB}{122, 178, 40}%
+\definecolor{cegekablue}{RGB}{51, 107, 159}%
+\newcolumntype{g}{>{\columncolor{lightgray}}l}%
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}%
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}%
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}%
+\pretitle{\begin{flushright}\LARGE}%
+\newcommand{\subtitle}[1]{\posttitle{ \par\end{flushright} \begin{flushright}\large{\bfseries\color{cegekablue} #1 }\end{flushright} \vspace{-5ex}}}%
+\setmainfont{Calibri}%
+\titleformat{\section}{\color{sectiongray}\normalfont\Large\bfseries}{\color{sectiongray}\thesection}{1em}{}%
+\arrayrulecolor{darkgray}%
+\def\arraystretch{1.5}%
+\setlength{\parindent}{0pt}%
+\usetikzlibrary{calc}%
+\fancypagestyle{header}{ 
+\renewcommand{\headrulewidth}{0pt}%
+\renewcommand{\footrulewidth}{0pt}%
+\fancyhead{ 
+}%
+\fancyfoot{ 
+}%
+\fancyhead[L]{ 
+\begin{tikzpicture}[remember picture,overlay]%
+\draw  let \p1=($(current page.north)-(current page header area.south)$), 	\n1={veclen(\x1,\y1)} in 	node [opacity = 0.5,inner sep=0,outer sep=0,below right] 	at (current page.north west){\includegraphics[width=\paperwidth,height=\n1]{../resources/header.png}};%
+\end{tikzpicture}
+}
+}%
+\title{CV Jos De Vos}%
+\subtitle{CV Templating Wizard}%
+\date{}%
+%
+\begin{document}%
+\normalsize%
+\pagestyle{header}%
+\maketitle%
+\thispagestyle{fancy}%
+\begin{multicols}{2}%
+\begin{tabular}{ll}%
+\textcolor{cegekablue}{ 
+\textbf{Geboortedatum:}
+}&01/01/1991\\%
+\textcolor{cegekablue}{ 
+\textbf{Geslacht:}
+}&M\\%
+\textcolor{cegekablue}{ 
+\textbf{Nationaliteit:}
+}&Belg\\%
+\end{tabular}%
+\columnbreak%
+\begin{flushright}%
+Profielbeschrijving {-} overzicht van vakkundigheid en ervaring%
+\end{flushright}%
+\end{multicols}%
+\section*{PROFESSIONELE ERVARING}%
+\label{sec:PROFESSIONELE ERVARING}%
+
+%
+\begin{tabularx}{\textwidth}{g X}%
+\rowcolor{cegekagreen}%
+\multicolumn{2}{l}{\textcolor{white}{ 
+\textbf{CEGEKA}
+}}\\%
+\textbf{Periode}&Augustus 1900 {-} Juni 1901\\%
+\hline%
+\textbf{Klant}&\\%
+\hline%
+\textbf{Project}&\\%
+\hline%
+\textbf{Rol}&\\%
+\hline%
+\textbf{Omschrijving}&\\%
+\hline%
+\textbf{Verantwoordelijkheden}&\begin{itemize}%
+\item%
+verantwoordelijkheid 1%
+\item%
+verantwoordelijkheid 2%
+\end{itemize}\\%
+\hline%
+\textbf{Omgeving}&\\%
+\hline%
+\end{tabularx}%
+\section*{OPLEIDING}%
+\label{sec:OPLEIDING}%
+
+%
+\begin{tabularx}{\textwidth}{X | l | c}%
+\rowcolor{cegekagreen}%
+\textcolor{white}{ 
+\textbf{DIPLOMA}
+}&\textcolor{white}{ 
+\textbf{INSTELLING}
+}&\textcolor{white}{ 
+\textbf{JAAR}
+}\\%
+Bachelor Informatica&KU Leuven&2000\\%
+\hline%
+Bachelor Informatica&KU Leuven&2000\\%
+\hline%
+\end{tabularx}%
+\newline%
+\vspace*{1.5cm}%
+\begin{tabularx}{\textwidth}{X | l | c}%
+\rowcolor{cegekagreen}%
+\textcolor{white}{ 
+\textbf{CERTIFICATEN}
+}&\textcolor{white}{ 
+\textbf{INSTELLING}
+}&\textcolor{white}{ 
+\textbf{JAAR}
+}\\%
+Certified Java&Oracle&2000\\%
+\hline%
+Certified Java&Oracle&2000\\%
+\hline%
+\end{tabularx}%
+\newline%
+\vspace*{1.5cm}%
+\begin{tabularx}{\textwidth}{X | l | c}%
+\rowcolor{cegekagreen}%
+\textcolor{white}{ 
+\textbf{TRAINING/CURSUSSEN}
+}&\textcolor{white}{ 
+\textbf{INSTELLING}
+}&\textcolor{white}{ 
+\textbf{JAAR}
+}\\%
+Agile Software Engineering&Cegeka&2000\\%
+\hline%
+Agile Software Introduction&Cegeka&2000\\%
+\hline%
+Exploration Days Winner&Cegeka&2018\\%
+\hline%
+\end{tabularx}%
+\end{document}

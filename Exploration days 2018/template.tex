@@ -1,0 +1,207 @@
+\documentclass{article}
+
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{titling}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{fontspec}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc}
+\usepackage{fancyhdr}
+\usepackage[top=4cm, bottom=2.5cm, left=2.5cm, right=2.5cm, headsep=0cm]{geometry}
+
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\begin{tikzpicture}[remember picture,overlay]
+\draw  let \p1=($(current page.north)-(current page header area.south)$),
+      \n1={veclen(\x1,\y1)} in
+node [opacity = 0.5,inner sep=0,outer sep=0,below right] 
+      at (current page.north west){\includegraphics[width=\paperwidth,height=\n1]{header.png}};
+\end{tikzpicture}}
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{flushright}
+    \begin{flushright}\large#1\end{flushright}
+    \vskip0.5em}%
+}
+
+\definecolor{lightgray}{RGB}{220, 220, 220}
+\definecolor{darkgray}{RGB}{197, 197, 197}
+\definecolor{sectiongray}{RGB}{137, 139, 144}
+\definecolor{cegekagreen}{RGB}{122, 178, 40}
+\definecolor{cegekablue}{RGB}{51, 107, 159}
+
+
+\newcolumntype{g}{>{\columncolor{lightgray}}l}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\titleformat{\section}{\color{sectiongray}\normalfont\Large\bfseries}{\color{sectiongray}\thesection}{1em}{}
+
+\pretitle{\begin{flushright}\LARGE}
+
+\setmainfont{Calibri}
+\def\arraystretch{1.5}
+\setlength{\parindent}{0pt}
+
+\title{CV Voornaam Naam}
+\subtitle{{\bfseries \color{cegekablue}Job titel}\vspace{-5ex}}
+\date{}
+\author{}
+
+
+
+\begin{document}
+
+\maketitle\thispagestyle{fancy}
+
+
+
+\begin{multicols}{2}
+	
+	\begin{tabular}{ll}
+		{\color{cegekablue} \bfseries Geboortedatum:} 	& 01/01/1991 \\
+		{\color{cegekablue} \bfseries Geslacht:} 		& M \\
+		{\color{cegekablue} \bfseries Nationaliteit:} 	& Belg \\
+	\end{tabular}
+
+	\columnbreak
+
+	\begin{flushright}
+		Profielbeschrijving - overzicht van vakkundigheid en ervaring
+	\end{flushright}
+
+\end{multicols}
+
+\section*{PROFESSIONELE ERVARING}
+
+\arrayrulecolor{darkgray}
+\begin{tabularx}{\textwidth}{g|X}
+	\rowcolor{cegekagreen}
+	\multicolumn{2}{l} {\bfseries \leavevmode\color{white} CEGEKA} \\
+	
+	{\bfseries Periode} 				& Augustus 1900 - Juni 1901 \\
+	\hline
+	{\bfseries Klant} 					& ~ \\
+	\hline
+	{\bfseries Project} 				& ~ \\
+	\hline
+	{\bfseries Rol} 					& ~ \\
+	\hline
+	{\bfseries Omschrijving} 			& ~ \\
+	\hline
+	{\bfseries Verantwoordelijkheden} 	
+	& 
+		\begin{itemize}
+			\item verantwoordelijkheid 1
+			\item verantwoordelijkheid 2 
+		\end{itemize} \\
+	\hline
+	{\bfseries Omgeving} 				& ~ \\
+	\hline
+\end{tabularx}
+
+\section*{OPLEIDING}
+
+\begin{tabularx}{\textwidth}{X|l|c}
+	\rowcolor{cegekagreen}
+	{\bfseries \leavevmode\color{white} DIPLOMA} 		& {\bfseries \color{white} INSTELLING} 	& {\bfseries \color{white} JAAR} \\
+	Bachelor Informatica 								& KU Leuven 							& 2000 \\
+	\hline
+\end{tabularx}
+
+\vspace*{1 cm}
+
+\begin{tabularx}{\textwidth}{X!{\color{darkgray}\vrule}l!{\color{darkgray}\vrule}c}
+	\rowcolor{cegekagreen}
+	{\bfseries \leavevmode\color{white} OPLEIDING} 		& {\bfseries \color{white} INSTELLING} 	& {\bfseries \color{white} JAAR} \\
+	Certified Bullshitting for Professionals			& Oracle 								& 2000 \\
+	\hline
+\end{tabularx}
+
+\vspace*{1 cm}
+
+\begin{tabularx}{\textwidth}{X|l|c}
+	\rowcolor{cegekagreen}
+	{\bfseries \leavevmode\color{white} TRAINING/CURSUSSEN} 		& {\bfseries \color{white} INSTELLING} 	& {\bfseries \color{white} JAAR} \\
+	Agile Introducing For Software									& Cegeka 								& 2000 \\
+	\hline
+\end{tabularx}
+
+\section*{FUNCTIONELE VAARDIGHEDEN}
+
+\begin{tabularx}{\textwidth}{X|L{2cm}|L{2cm}}
+	\rowcolor{cegekagreen}
+	{\bfseries \leavevmode\color{white} SECTOR} & {\bfseries \color{white} NIVEAU}	& {\bfseries \color{white} STATUS}
+\end{tabularx}
+
+\subsection*{Marktervaring}
+
+\begin{tabularx}{\textwidth}{X|L{2cm}|L{2cm}}
+\hline
+0100 Publiek									& Junior 							& Actief \\
+\hline
+\end{tabularx}
+
+\subsection*{Functionele expertise}
+
+\begin{tabularx}{\textwidth}{X|L{2cm}|L{2cm}}
+\hline
+IT - Algemeen									& Junior 							& Actief \\
+\hline
+\end{tabularx}
+
+\subsection*{Management skills}
+
+\begin{tabularx}{\textwidth}{X|L{2cm}|L{2cm}}
+\hline
+Working the whip								& Expert 							& Actief \\
+\hline
+\end{tabularx}
+
+\subsection*{Project management skills}
+
+\begin{tabularx}{\textwidth}{X|L{2cm}|L{2cm}}
+\hline
+Blaming your subordinates for failed deadlines	& Medior 							& Actief \\
+\hline
+\end{tabularx}
+
+\section*{TECHNISCHE \& TECHNOLOGISCHE VAARDIGHEDEN}
+
+\begin{tabularx}{\textwidth}{L{2cm}|X|L{2cm}|L{2cm}|L{2cm}}
+	\rowcolor{cegekagreen}
+	{\bfseries \leavevmode\color{white} EXPERTISE}	& {\bfseries \color{white} AREA}	& {\bfseries \color{white} VERSIE}	& {\bfseries \color{white} NIVEAU}	& {\bfseries \color{white} STATUS}
+\end{tabularx}
+
+\subsection*{IT Technologieën - Ontwikkeling}
+
+\begin{tabularx}{\textwidth}{L{2cm}|X|L{2cm}|L{2cm}|L{2cm}}
+\hline
+{\bfseries Programmeertalen}						& Java								& 6 :(								& Medior 							& Actief \\
+\hline
+~													& Python							& 3.6								& Beginner							& Actief \\
+\hline
+\end{tabularx}
+
+\section*{TALENKENNIS}
+
+\begin{tabular}{l|l|l}
+	\rowcolor{cegekagreen}
+	{\bfseries \leavevmode\color{white} TAAL}	& {\bfseries \color{white} SCHRIFTELIJK}	& {\bfseries \color{white} MONDELING} \\
+	\hline
+	Nederlands									& Moedertaal								& Moedertaal \\
+	\hline
+	Memes										& Uitstekend								& Cringy \\
+	\hline
+
+\end{tabular}
+
+\end{document}

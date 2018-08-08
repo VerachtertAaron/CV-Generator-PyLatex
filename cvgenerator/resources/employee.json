@@ -1,0 +1,22 @@
+{
+  "firstName":"Pieter",
+  "lastName":"Baerts",
+  "job title": "CV Templating Wizard",
+  "trainings": [
+    {
+      "title": "Agile Software Engineering",
+      "organisation": "Cegeka",
+      "year": 2000
+    },
+    {
+      "title": "Agile Software Introduction",
+      "organisation": "Cegeka",
+      "year": 2000
+    },
+    {
+      "title": "Exploration Days Winner",
+      "organisation": "Cegeka",
+      "year": 2018
+    }
+  ]
+}
